@@ -1,3 +1,2 @@
-"# bfswieta" 
-"# vcard" 
+
 "# vcard" 
