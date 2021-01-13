@@ -1,0 +1,392 @@
+@import url(https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css);
+@import url(https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
+/**====================================
+ *	1. RESET
+ *	2. WRAPPER
+ *	3. NAV
+ *	4. CARD
+ *		4.1 CARD COLOR
+ *	5. USEFULLY
+ *		5.1 HELPERS
+ *		5.2 FONT AWESOME
+ *		5.3 OWL SLIDER
+ *	6. ANIMATIONS
+ *		6.1 BACKGROUND
+ *		6.2 OTHERS
+ ====================================*/
+ 
+/* ==================================== 1. RESET */
+html, body {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+body{
+	color: #000;
+	font-family: 'Open Sans', sans-serif;
+	overflow-x: hidden;
+	overflow-y: scroll !important;
+	background-color:#000;
+
+}
+
+body {
+	position: relative;
+	z-index: 1;
+  }
+  
+  body::before {
+	content: "";
+	position: absolute;
+	top: 0; 
+	left: 0;
+	width: 100%; 
+	height: 100%;  
+	opacity: .4; 
+	z-index: -1;
+	background-image: url('./assets/bg1-unsplash.jpg');
+	background-size:cover;
+	background-position: center center;
+  }
+
+
+h1, h2, h3, h4, h5, h6{
+	margin: 0;
+	padding: 0;
+}
+input, textarea, button:focus{
+	outline: none;
+}
+a,a.hover{
+	transition: all .2s ease-in-out;
+}
+
+/* ==================================== 2. WRAPPER */
+.vertical-center{
+	min-height: 100%;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+/* ==================================== 3. NAV */
+nav{
+	max-width: 500px;
+	overflow: auto;
+	float: none;
+	margin: 0 auto;
+	position: relative;
+}
+nav ul{
+	overflow: auto;
+	white-space: nowrap;
+	max-width: 87%;
+	float: right;
+	margin: 0;
+	padding: .5em;
+	list-style: none;
+	background-color: #fff;
+	border-radius: 5px;
+	border-bottom-right-radius: 0 !important;
+	border-bottom-left-radius: 0 !important;
+}
+nav ul li{
+	display: inline-block;
+	padding: 0 .7em;
+}
+nav ul li a{
+	display: none;
+	font-size: .8em;
+	color: #9da0a7;
+	font-weight: bold;
+}
+nav ul li a:first-of-type{
+	display: block;
+}
+nav ul li a:hover,
+nav ul li a:active,
+nav ul li a:focus,
+nav ul li a.active{
+	color: #000;
+}
+nav ul li a:hover,
+nav ul li a:active,
+nav ul li a:visited,
+nav ul li a:link{
+	text-decoration: none;
+}
+
+/* ==================================== 4. CARD */
+.card{
+	display: none;
+	float: none;
+	padding: 2em;
+	margin: 0 auto;
+	max-width: 500px;
+	min-height: 210px;
+	border-color: transparent;
+	border-radius: 5px;
+	border-top-right-radius: 0 !important;
+}
+.card:first-of-type{
+	display: block;
+}
+/* ============ 4.1 IMG */
+.card-img img{
+	width: 100%;
+	height: auto;
+}
+/* ============ 4.2 TITLE */
+.card-title{
+	margin: 0;
+	padding: 0;
+}
+.card-title h2{
+	font-size: 1.4em;
+}
+/* ============ 4.3 DETAIL */
+.card-detail{
+	color: #9da0a7;
+	font-size: 0.9em;
+	padding-top: 0.6em;
+}
+.card-detail .contact-info span{
+	padding-top: 0.4em;
+}
+.card-detail .contact-info a{
+	color: #9da0a7;
+}
+.card-detail .contact-info strong{
+	color: #000;
+}
+/* Page */
+.card_page--detail{
+	color: #9da0a7;
+	font-size: 0.9em;
+	padding-top: 1.6em;
+}
+.card_page--detail strong.black{
+	color: #000;
+}
+/* ============ 4.4 COLORS */
+.card_color--white{
+	background-color: #fff;
+}
+
+
+/* ==================================== 5. USEFULLY */
+/* ============ 5.1 HELPERS */
+.hidden{
+	display: none;
+}
+/* ============ 5.2 FONT AWESOME */
+.fa-yellow{
+	color: #f9ae31;
+}
+/* ============ 5.3 OWL SLIDER */
+.owl-carousel{
+	position: relative;
+}
+.owl-carousel .owl-dots{
+	display: none;
+}
+.owl-carousel .owl-nav{
+	width: 100%;
+	font-weight: bold;
+	padding-top: 1.2em
+}
+.owl-carousel .owl-nav .owl-next{
+	float: right;
+}
+.owl-carousel .owl-nav button:hover{
+	color: #000;
+}
+.owl-img-caption-text{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 0.5em;
+	margin: 0;
+	font-size: 0.8em;
+	background-color: #fff;
+}
+/* Owl Slider image overlay on hover */
+.owl-carousel .item {
+	position: relative;
+}
+
+.owl-img-overlay-image {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.owl-img-overlay {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	opacity: 0;
+	transition: .5s ease;
+	background-color: #000;
+}
+
+.owl-carousel .item:hover .owl-img-overlay {
+	opacity: 1;
+}
+
+.owl-img-overlay-text {
+	height:100%;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	align-self: center;
+	color: #fff;
+	padding: 1em
+}
+/* ============ 5.4 SOCIAL BUTTONS */
+.social{
+	width: 48px;
+	height: 48px;
+	display: inline-block;
+	background-color: #f90;
+	font-size: 1.6em;
+	border-radius: 0.2em;
+	color: #fff;
+	position: relative;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+}
+.social:hover{
+	color: #fff;
+}
+.social i{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+}
+.social-facebook{background-color: #3A559F;}
+.social-twitter{background-color: #2ba3ef;}
+.social-instagram{
+	background: #f09433; 
+	background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+	background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+	background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+.social-youtube{background-color: #fa141b;}
+.social-github{background-color: #24292e;}
+.social-codepen{background-color: #24292e;}
+.social-email{background-color: #FED604;}
+
+/* ==================================== 6. ANIMATIONS */
+/* ============ 6.1 BACKGROUND */
+/* @keyframes bgChangeColor {
+  0%   {background: #00CECB;}
+  25%  {background: #FF5E5B;}
+  50%  {background: #3BCEAC;}
+  75%  {background: #0EAD69;}
+  100% {background: #00CECB;}
+}
+@-webkit-keyframes bgChangeColor { /* Safari and Chrome - necessary duplicate */
+  /* 0%   {background: #00CECB;}
+  25%  {background: #FF5E5B;}
+  50%  {background: #3BCEAC;}
+  75%  {background: #0EAD69;}
+  100% {background: #00CECB;}
+} */
+
+/* ============ 6.2 OTHERS */
+@keyframes flipIn {
+	from {
+		-webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+		transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+		opacity: 0;
+	}
+
+	40% {
+		-webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+		transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+
+	60% {
+		-webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+		transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+		opacity: 1;
+	}
+
+	80% {
+		-webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+		transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+	}
+
+	to {
+		-webkit-transform: perspective(400px);
+		transform: perspective(400px);
+	}
+}
+@-webkit-keyframes flipIn { /* Safari and Chrome - necessary duplicate */
+	from {
+		-webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+		transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+		opacity: 0;
+	}
+
+	40% {
+		-webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+		transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+		-webkit-animation-timing-function: ease-in;
+		animation-timing-function: ease-in;
+	}
+
+	60% {
+		-webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+		transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+		opacity: 1;
+	}
+
+	80% {
+		-webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+		transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+	}
+
+	to {
+		-webkit-transform: perspective(400px);
+		transform: perspective(400px);
+	}
+}
+
+.flipIn {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
+	-webkit-backface-visibility: visible !important;
+	backface-visibility: visible !important;
+	-webkit-animation-name: flipIn;
+	animation-name: flipIn;
+}
+
+/* ==================================== 7. MOBILE & RESPONSIVE */
+@media (max-width: 720px) {
+	.container-fluid{
+		padding-top: 15px;
+		padding-bottom: 15px;
+	}
+	.card-title{
+		padding-top: 0.6em;
+	}
+}

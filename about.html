@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>About me | My Business Card</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    
+    <div class="vertical-center flipIn">
+        <div class="container-fluid">
+            
+            <nav>
+                <ul>
+                    <li><a href="javascript:void(0);" onclick="toggleNav(1);">X</a></li>
+                    <li><a href="about.html" class="active">ABOUT</a></li>
+                    <li><a href="skills.html">SKILLS</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                </ul>
+            </nav>
+
+            <nav class="hidden">
+                <ul>
+                    <li><a href="./cv/cv_piotrpawlowski.pdf" target="_blank"><i class="fa fa-download"></i> RESUME</a></li>
+                    <li><a href="index.html"><i class="fa fa-exchange"></i> FRONT</a></li>
+                    <li><a href="javascript:void(0);" onclick="toggleNav(0);"><i class="fa fa-navicon"></i> MENU</a></li>
+                </ul>
+            </nav><!-- nav -->
+
+            <section class="card card_color--white">
+                <div class="card-title">
+                    <h2>About! <strong>Who Am I?</strong></h2>
+                    <small>I'm a creative guy with strong attitude towards learning new technologies</small>
+                </div>
+
+                <div class="card_page--detail">
+                    A photographer, videomaker and designer. Specialist in new media. Digital storyteller ready for new challenges. I am strongly passionate about communication, marketing and Social Media. I am freak and physicist. </div>
+            </section><!-- section: front -->
+
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        function toggleNav(a) {
+            var elems = document.getElementsByTagName('nav');
+            for (var i = 0; i<elems.length; i++) {
+                elems[i].style.display = 'none';
+
+                if (i == a)
+                    elems[i].style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

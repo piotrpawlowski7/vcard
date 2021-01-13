@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Skills | My Business Card</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    
+    <div class="vertical-center flipIn">
+        <div class="container-fluid">
+            
+            <nav>
+                <ul>
+                    <li><a href="javascript:void(0);" onclick="toggleNav(1);">X</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="skills.html" class="active">SKILLS</a></li>
+                    <li><a href="portfolio.html">PORTFOLIO</a></li>
+                </ul>
+            </nav>
+
+            <nav class="hidden">
+                <ul>
+                    <li><a href="./cv/cv_piotrpawlowski.pdf" target="_blank"><i class="fa fa-download"></i> RESUME</a></li>
+                    <li><a href="index.html"><i class="fa fa-exchange"></i> FRONT</a></li>
+                    <li><a href="javascript:void(0);" onclick="toggleNav(0);"><i class="fa fa-navicon"></i> MENU</a></li>
+                </ul>
+            </nav><!-- nav -->
+
+            <section class="card card_color--white">
+                <div class="card-title">
+                    <h2>Skills! <strong>I know these</strong></h2>
+                    <small>I'm focused on developing new skills. Currently learning Javascript.</small>
+                </div>
+
+                <div class="card_page--detail row">
+                    <div class="col-md-3 col-sm-6 col-6"><strong>VIDEO</strong></div>
+                    <div class="col-md-3 col-sm-6 col-6">
+                       <i class="fa fa-star fa-yellow"></i>
+                       <i class="fa fa-star fa-yellow"></i>
+                       <i class="fa fa-star fa-yellow"></i>
+                       <i class="fa fa-star fa-yellow"></i>
+                       <i class="fa fa-star fa-yellow"></i>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-6"><strong>CSS</strong></div>
+                    <div class="col-md-3 col-sm-6 col-6">
+                        <i class="fa fa-star fa-yellow"></i>
+                        <i class="fa fa-star fa-yellow"></i>
+                        <i class="fa fa-star fa-yellow"></i>
+                        <i class="fa fa-star fa-yellow"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                  
+             
+                    <div class="col-md-3 col-sm-6 col-6"><strong>PHOTO</strong></div>
+                    <div class="col-md-3 col-sm-6 col-6">
+                        <i class="fa fa-star fa-yellow"></i>
+                        <i class="fa fa-star fa-yellow"></i>
+                        <i class="fa fa-star fa-yellow"></i>
+                        <i class="fa fa-star fa-yellow"></i>
+                        <i class="fa fa-star fa-yellow"></i>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-6"><strong>HTML</strong></div>
+                    <div class="col-md-3 col-sm-6 col-6">
+                        <i class="fa fa-star fa-yellow"></i>
+                        <i class="fa fa-star fa-yellow"></i>
+                        <i class="fa fa-star fa-yellow"></i>
+                        <i class="fa fa-star fa-yellow"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-6"><strong>DESIGN</strong></div>
+                    <div class="col-md-3 col-sm-6 col-6">
+                        <i class="fa fa-star fa-yellow"></i>
+                        <i class="fa fa-star fa-yellow"></i>
+                        <i class="fa fa-star fa-yellow"></i>
+                        <i class="fa fa-star fa-yellow"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-6"><strong>JAVASCRIPT</strong></div>
+                    <div class="col-md-3 col-sm-6 col-6">
+                        <i class="fa fa-star fa-yellow"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                </div>
+                   
+            </section><!-- section: front -->
+
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        function toggleNav(a) {
+            var elems = document.getElementsByTagName('nav');
+            for (var i = 0; i<elems.length; i++) {
+                elems[i].style.display = 'none';
+
+                if (i == a)
+                    elems[i].style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
